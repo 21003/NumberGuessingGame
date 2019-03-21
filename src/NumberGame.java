@@ -14,6 +14,9 @@ public class NumberGame {
         System.out.println("Can you give me a number between 1 and 100 please");
         userNumber = keyboard.nextInt();
 
+        if (userNumber == randomNumber) {
+            System.out.println(randomNumber+ " is the correct number");
+        }
         while (userNumber < randomNumber || userNumber > randomNumber) {
 
             if (userNumber < randomNumber) {
