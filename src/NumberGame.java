@@ -8,23 +8,33 @@ public class NumberGame {
 
         int randomNumber, userNumber;
 
-            randomNumber = (int) (Math.random() * 100);
+        randomNumber = (int) (Math.random() * 100);
+        System.out.println(randomNumber);
 
-            System.out.println("Can you give me a number between 1 and 100 please");
-            userNumber = keyboard.nextInt();
+        System.out.println("Can you give me a number between 1 and 100 please");
+        userNumber = keyboard.nextInt();
 
-            if (userNumber < randomNumber) ;
-            {
+        while (userNumber < randomNumber || userNumber > randomNumber) {
+
+            if (userNumber < randomNumber) {
+
                 System.out.println("I'm sorry that number is to low");
                 userNumber = keyboard.nextInt();
             }
-            if (userNumber > randomNumber) ;
-            {
+
+            if (userNumber > randomNumber) {
+
                 System.out.println("I'm sorry that number is to high");
                 userNumber = keyboard.nextInt();
-            }
 
+                }
+                if (userNumber == randomNumber){
 
+                System.out.println(randomNumber+ " is the correct number");
+
+                }
         }
     }
+}
+
 
